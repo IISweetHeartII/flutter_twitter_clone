@@ -1,0 +1,12 @@
+specVersion: "v1beta"
+serviceId: "flutter_twitter_clone"
+location: "asia-east1"
+schema:
+  source: "./schema"
+  datasource:
+    postgresql:
+      database: "fdcdb"
+      cloudSql:
+        instanceId: "flutter_twitter_clone-fdc"
+      # schemaValidation: "COMPATIBLE"
+connectorDirs: ["./connector"]

@@ -16,7 +16,7 @@ class ChatState extends AppState {
   List<ChatMessage>? _messageList;
   List<ChatMessage>? _chatUserList;
   UserModel? _chatUser;
-  String serverToken = "<FCM SERVER KEY>";
+  String serverToken = "";
 
   /// Get FCM server key from firebase project settings
   UserModel? get chatUser => _chatUser;
@@ -84,7 +84,6 @@ class ChatState extends AppState {
   void getFCMServerKey() async {
     final FirebaseRemoteConfig remoteConfig = FirebaseRemoteConfig.instance;
     await remoteConfig.fetchAndActivate();
-    // await remoteConfig.
     var data = remoteConfig.getString('FcmServerKey');
     if (data.isNotEmpty) {
       serverToken = jsonDecode(data)["key"];

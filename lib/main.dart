@@ -1,19 +1,18 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_twitter_clone/state/suggestionUserState.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
+import 'package:google_fonts/google_fonts.dart';
 
-import 'package:flutter_twitter_clone/state/searchState.dart';
-import 'package:flutter_twitter_clone/ui/page/common/locator.dart';
-import 'package:flutter_twitter_clone/ui/theme/theme.dart';
-
-import 'helper/routes.dart';
 import 'state/appState.dart';
 import 'state/authState.dart';
 import 'state/chats/chatState.dart';
 import 'state/feedState.dart';
 import 'state/notificationState.dart';
+import 'state/searchState.dart';
+import 'state/suggestionUserState.dart';
+import 'ui/page/common/locator.dart';
+import 'ui/theme/theme.dart';
+import 'helper/routes.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -34,10 +33,8 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider<FeedState>(create: (_) => FeedState()),
         ChangeNotifierProvider<ChatState>(create: (_) => ChatState()),
         ChangeNotifierProvider<SearchState>(create: (_) => SearchState()),
-        ChangeNotifierProvider<NotificationState>(
-            create: (_) => NotificationState()),
-        ChangeNotifierProvider<SuggestionsState>(
-            create: (_) => SuggestionsState()),
+        ChangeNotifierProvider<NotificationState>(create: (_) => NotificationState()),
+        ChangeNotifierProvider<SuggestionsState>(create: (_) => SuggestionsState()),
       ],
       child: MaterialApp(
         title: 'Fwitter',
