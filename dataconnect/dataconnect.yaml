@@ -7,6 +7,6 @@ schema:
     postgresql:
       database: "fdcdb"
       cloudSql:
-        instanceId: "flutter_twitter_clone-fdc"
+        instanceId: "fwitterclonefdk"
       # schemaValidation: "COMPATIBLE"
 connectorDirs: ["./connector"]
