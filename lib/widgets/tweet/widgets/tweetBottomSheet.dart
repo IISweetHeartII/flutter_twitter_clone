@@ -132,10 +132,10 @@ class TweetBottomSheet {
                         ),
                         TextButton(
                           style: ButtonStyle(
-                            backgroundColor: MaterialStateProperty.all(
+                            backgroundColor: WidgetStateProperty.all(
                               TwitterColor.dodgeBlue,
                             ),
-                            foregroundColor: MaterialStateProperty.all(
+                            foregroundColor: WidgetStateProperty.all(
                               TwitterColor.white,
                             ),
                           ),
@@ -260,10 +260,10 @@ class TweetBottomSheet {
                         ),
                         TextButton(
                           style: ButtonStyle(
-                            backgroundColor: MaterialStateProperty.all(
+                            backgroundColor: WidgetStateProperty.all(
                               TwitterColor.dodgeBlue,
                             ),
-                            foregroundColor: MaterialStateProperty.all(
+                            foregroundColor: WidgetStateProperty.all(
                               TwitterColor.white,
                             ),
                           ),
